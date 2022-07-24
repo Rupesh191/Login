@@ -1,0 +1,24 @@
+<div conainer></div>
+<div class="col-md-6 col-md-offset-3">
+    <h4 style="text-align:center;color:rgb(7, 1, 15)">Login</h4>
+
+    <form name="form" ng-submit="vm.login()" role="form">
+        <fieldset>
+          <div class="form-group">
+            <label for="exampleInputusername" class="form-label mt-4">UserName</label>
+            <input type="username" class="form-control" id="exampleInputusername" aria-describedby="usernameHelp" placeholder="Enter UserName" ng-model="vm.username" required/>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputpassword" class="form-label mt-4">Password</label>
+            <input type="password" class="form-control" id="exampleInputpassword" placeholder="Enter Password" ng-model="vm.password" required/>
+          </div>
+          </fieldset>
+
+          <div class="form-actions" layout="row">
+            <button type="submit" ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-primary">Login</button>
+            <img ng-if="vm.dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///" />
+            <span style="float:right">Not a member?<a href="#!/register" class="btn btn-link">Register</a></span>
+        </div>
+      </form>
+
+</div>
